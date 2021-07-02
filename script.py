@@ -21,10 +21,15 @@ email = "user.emailAddress"
 phone = "user.phone"
 continueBtn = '//*[@id="checkoutApp"]/div[2]/div[1]/div[1]/main/div[2]/div[2]/form/section/div/div[2]/div/div/button'
 invalidadd = "/html/body/div[4]/div[2]/div/div/div/button[1]"
+card = "optimized-cc-card-number"
+xprmonth = '//*[@id="credit-card-expiration-month"]/div/div/select'
+xpryear = '//*[@id="credit-card-expiration-year"]/div/div/select'
+ccv = "credit-card-cvv"
+final_btn = "payment__order-summary"
 
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"
-PAGE = "https://www.bestbuy.com/site/mario-kart-8-deluxe-nintendo-switch/5723304.p?skuId=5723304"
+PAGE = "https://www.bestbuy.com/site/samsung-galaxy-buds-true-wireless-earbud-headphones-black/6400885.p?skuId=6400885"
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(PATH)
 driver.implicitly_wait(10)
@@ -65,5 +70,13 @@ while True:
             xpath(invalidadd).click()
         except NoSuchElementException:
             continue
-
+        ids(card).send_keys("4916531789621660")
+        select = Select(xpath(xprmonth))
+        select.select_by_visible_text("10")
+        select = Select(xpath(xpryear))
+        select.select_by_visible_text("2023")
+        ids(ccv).send_keys("331")
+        classname(final_btn).click()
+        time.sleep(2)
+        driver.quit()
         break
