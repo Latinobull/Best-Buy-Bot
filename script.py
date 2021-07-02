@@ -22,13 +22,13 @@ phone = "user.phone"
 continueBtn = '//*[@id="checkoutApp"]/div[2]/div[1]/div[1]/main/div[2]/div[2]/form/section/div/div[2]/div/div/button'
 invalidadd = "/html/body/div[4]/div[2]/div/div/div/button[1]"
 
-page = "https://www.bestbuy.com/site/mario-kart-8-deluxe-nintendo-switch/5723304.p?skuId=5723304"
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"
+PAGE = "https://www.bestbuy.com/site/mario-kart-8-deluxe-nintendo-switch/5723304.p?skuId=5723304"
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(PATH)
 driver.implicitly_wait(10)
-driver.get(page)
+driver.get(PAGE)
 classname = driver.find_element_by_class_name
 xpath = driver.find_element_by_xpath
 ids = driver.find_element_by_id
