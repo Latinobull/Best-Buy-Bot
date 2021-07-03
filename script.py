@@ -57,19 +57,19 @@ while True:
         classname(guest).click()
         xpath(first).send_keys("John")
         xpath(last).send_keys("Doe")
-        xpath(street).send_keys("123 Fairview")
-        xpath(city).send_keys("Queens")
+        xpath(street).send_keys("1760 Utica Ave")
+        xpath(city).send_keys("Brooklyn")
         select = Select(xpath(state))
         select.select_by_visible_text("NY")
-        xpath(zipcode).send_keys(21034)
+        xpath(zipcode).send_keys(11239)
         ids(email).send_keys("johndoe123@gmail.com")
         ids(phone).send_keys(7184567890)
         xpath(continueBtn).click()
         time.sleep(2)
-        try:
-            xpath(invalidadd).click()
-        except NoSuchElementException:
-            continue
+        # try:
+        #     xpath(invalidadd).click()
+        # except NoSuchElementException:
+        #     continue
         ids(card).send_keys("4916531789621660")
         select = Select(xpath(xprmonth))
         select.select_by_visible_text("10")
@@ -77,6 +77,6 @@ while True:
         select.select_by_visible_text("2023")
         ids(ccv).send_keys("331")
         classname(final_btn).click()
-        time.sleep(2)
-        driver.quit()
+        time.sleep(4)
+        driver.close()
         break
