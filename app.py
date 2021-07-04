@@ -8,6 +8,15 @@ window = Tk(
 def test():
     print(first_value.get())
     print(last_value.get())
+    print(address_value.get())
+    print(city_value.get())
+    print(zipcode_value.get())
+    print(email_value.get())
+    print(phone_value.get())
+    print(card_value.get())
+    print(month_value.get())
+    print(year_value.get())
+    print(ccv_value.get())
 
 
 firstLabel = Label(window, text="Firstname:")
