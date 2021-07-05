@@ -6,17 +6,21 @@ window = Tk(
 
 
 def test():
-    print(first_value.get())
-    print(last_value.get())
-    print(address_value.get())
-    print(city_value.get())
-    print(zipcode_value.get())
-    print(email_value.get())
-    print(phone_value.get())
-    print(card_value.get())
-    print(month_value.get())
-    print(year_value.get())
-    print(ccv_value.get())
+    content = [
+        first_value,
+        last_value,
+        address_value,
+        city_value,
+        email_value,
+        phone_value,
+        card_value,
+        month_value,
+        year_value,
+        ccv_value,
+        site_value,
+    ]
+    for stuff in content:
+        print(stuff.get())
 
 
 firstLabel = Label(window, text="Firstname:")
