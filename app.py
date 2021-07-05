@@ -3,6 +3,17 @@ from tkinter import *
 window = Tk(
     screenName="BB-Bot",
 )
+userFirst = ""
+userLast = ""
+userAddress = ""
+userCity = ""
+userEmail = ""
+userPhone = ""
+userCard = ""
+userMonth = ""
+userYear = ""
+userCCV = ""
+userSite = ""
 
 
 def test():
