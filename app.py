@@ -1,4 +1,5 @@
 from tkinter import *
+from script import startBot
 
 window = Tk(
     screenName="BB-Bot",
@@ -36,7 +37,7 @@ def test():
         userSite,
     ) = content
 
-    print(userFirst)
+    startBot()
 
 
 firstLabel = Label(window, text="Firstname:")
@@ -129,3 +130,7 @@ b1.grid(row=12, column=1)
 
 
 window.mainloop()
+
+if __name__ == "__main__":
+
+    startBot()
