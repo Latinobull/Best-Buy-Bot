@@ -3,50 +3,40 @@ from tkinter import *
 window = Tk(
     screenName="BB-Bot",
 )
-userFirst = ""
-userLast = ""
-userAddress = ""
-userCity = ""
-userZipcode = ""
-userEmail = ""
-userPhone = ""
-userCard = ""
-userMonth = ""
-userYear = ""
-userCCV = ""
-userSite = ""
 
 
 def test():
     content = [
-        first_value,
-        last_value,
-        address_value,
-        city_value,
-        zipcode_value,
-        email_value,
-        phone_value,
-        card_value,
-        month_value,
-        year_value,
-        ccv_value,
-        site_value,
+        first_value.get(),
+        last_value.get(),
+        address_value.get(),
+        city_value.get(),
+        zipcode_value.get(),
+        email_value.get(),
+        phone_value.get(),
+        card_value.get(),
+        month_value.get(),
+        year_value.get(),
+        ccv_value.get(),
+        site_value.get(),
     ]
 
-    userFirst,
-    userLast,
-    userAddress,
-    userCity,
-    userZipcode,
-    userEmail,
-    userPhone,
-    userCard,
-    userMonth,
-    userYear,
-    userCCV,
-    userSite = content
-    for stuff in content:
-        print(stuff.get())
+    (
+        userFirst,
+        userLast,
+        userAddress,
+        userCity,
+        userZipcode,
+        userEmail,
+        userPhone,
+        userCard,
+        userMonth,
+        userYear,
+        userCCV,
+        userSite,
+    ) = content
+
+    print(userFirst)
 
 
 firstLabel = Label(window, text="Firstname:")
