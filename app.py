@@ -130,7 +130,3 @@ b1.grid(row=12, column=1)
 
 
 window.mainloop()
-
-if __name__ == "__main__":
-
-    startBot()
