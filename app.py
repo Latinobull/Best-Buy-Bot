@@ -7,7 +7,7 @@ window = Tk(
 
 
 def test():
-    content = [
+    test.content = [
         first_value.get(),
         last_value.get(),
         address_value.get(),
@@ -35,8 +35,7 @@ def test():
         userYear,
         userCCV,
         userSite,
-    ) = content
-
+    ) = test.content
     startBot()
 
 

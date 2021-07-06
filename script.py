@@ -3,6 +3,9 @@ import time
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import Select
 
+from typing import TYPE_CHECKING
+
+
 # variables
 
 button = "add-to-cart-button"
@@ -29,7 +32,11 @@ final_btn = "payment__order-summary"
 
 
 def startBot():
-    print("Run the bot on Submit")
+    if TYPE_CHECKING:
+        from app import test
+
+        test()
+        print(test.content)
 
 
 def Test():
