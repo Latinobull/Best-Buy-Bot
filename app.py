@@ -7,6 +7,7 @@ userFirst = ""
 userLast = ""
 userAddress = ""
 userCity = ""
+userZipcode = ""
 userEmail = ""
 userPhone = ""
 userCard = ""
@@ -22,6 +23,7 @@ def test():
         last_value,
         address_value,
         city_value,
+        zipcode_value,
         email_value,
         phone_value,
         card_value,
@@ -30,6 +32,19 @@ def test():
         ccv_value,
         site_value,
     ]
+
+    userFirst,
+    userLast,
+    userAddress,
+    userCity,
+    userZipcode,
+    userEmail,
+    userPhone,
+    userCard,
+    userMonth,
+    userYear,
+    userCCV,
+    userSite = content
     for stuff in content:
         print(stuff.get())
 
