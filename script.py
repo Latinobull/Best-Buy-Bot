@@ -28,55 +28,59 @@ ccv = "credit-card-cvv"
 final_btn = "payment__order-summary"
 
 
-PATH = "C:\Program Files (x86)\chromedriver.exe"
-PAGE = "https://www.bestbuy.com/site/samsung-galaxy-buds-true-wireless-earbud-headphones-black/6400885.p?skuId=6400885"
-options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(PATH)
-driver.implicitly_wait(10)
-driver.get(PAGE)
-classname = driver.find_element_by_class_name
-xpath = driver.find_element_by_xpath
-ids = driver.find_element_by_id
+def startBot():
+    print("Run the bot on Submit")
 
 
-while True:
-    if classname(button).text == "Sold Out":
-        print(classname(button).text)
-        time.sleep(2)
-        driver.refresh()
-        continue
-    else:
-        classname(button).click()
-        classname(cart).click()
-        try:
-            xpath(shipping1).click()
-        except NoSuchElementException:
-            xpath(shipping2).click()
-        time.sleep(1)
-        classname(checkout).click()
-        classname(guest).click()
-        xpath(first).send_keys("John")
-        xpath(last).send_keys("Doe")
-        xpath(street).send_keys("1760 Utica Ave")
-        xpath(city).send_keys("Brooklyn")
-        select = Select(xpath(state))
-        select.select_by_visible_text("NY")
-        xpath(zipcode).send_keys(11239)
-        ids(email).send_keys("johndoe123@gmail.com")
-        ids(phone).send_keys(7184567890)
-        xpath(continueBtn).click()
-        time.sleep(2)
-        # try:
-        #     xpath(invalidadd).click()
-        # except NoSuchElementException:
-        #     continue
-        ids(card).send_keys("4916531789621660")
-        select = Select(xpath(xprmonth))
-        select.select_by_visible_text("10")
-        select = Select(xpath(xpryear))
-        select.select_by_visible_text("2023")
-        ids(ccv).send_keys("331")
-        classname(final_btn).click()
-        time.sleep(4)
-        driver.close()
-        break
+def Test():
+    PATH = "C:\Program Files (x86)\chromedriver.exe"
+    PAGE = "https://www.bestbuy.com/site/samsung-galaxy-buds-true-wireless-earbud-headphones-black/6400885.p?skuId=6400885"
+    options = webdriver.ChromeOptions()
+    driver = webdriver.Chrome(PATH)
+    driver.implicitly_wait(10)
+    driver.get(PAGE)
+    classname = driver.find_element_by_class_name
+    xpath = driver.find_element_by_xpath
+    ids = driver.find_element_by_id
+
+    while True:
+        if classname(button).text == "Sold Out":
+            print(classname(button).text)
+            time.sleep(2)
+            driver.refresh()
+            continue
+        else:
+            classname(button).click()
+            classname(cart).click()
+            try:
+                xpath(shipping1).click()
+            except NoSuchElementException:
+                xpath(shipping2).click()
+            time.sleep(1)
+            classname(checkout).click()
+            classname(guest).click()
+            xpath(first).send_keys("John")
+            xpath(last).send_keys("Doe")
+            xpath(street).send_keys("1760 Utica Ave")
+            xpath(city).send_keys("Brooklyn")
+            select = Select(xpath(state))
+            select.select_by_visible_text("NY")
+            xpath(zipcode).send_keys(11239)
+            ids(email).send_keys("johndoe123@gmail.com")
+            ids(phone).send_keys(7184567890)
+            xpath(continueBtn).click()
+            time.sleep(2)
+            # try:
+            #     xpath(invalidadd).click()
+            # except NoSuchElementException:
+            #     continue
+            ids(card).send_keys("4916531789621660")
+            select = Select(xpath(xprmonth))
+            select.select_by_visible_text("10")
+            select = Select(xpath(xpryear))
+            select.select_by_visible_text("2023")
+            ids(ccv).send_keys("331")
+            classname(final_btn).click()
+            time.sleep(4)
+            driver.close()
+            break
