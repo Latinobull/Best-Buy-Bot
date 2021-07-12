@@ -14,7 +14,7 @@ shipping1 = '//*[@id="cartApp"]/div[2]/div[1]/div/div[1]/div[1]/section[1]/div[4
 shipping2 = '//*[@id="cartApp"]/div[2]/div[1]/div/div[1]/div[1]/section[2]/div/div/div[1]/form/ul/li[2]/div[1]/div/label/strong'
 checkout = "checkout-buttons__checkout"
 guest = "button-wrap"
-first = '//*[@id="consolidatedAddresses.ui_address_2.firstName"]'
+first = '//*[@id ="consolidatedAddresses.ui_address_2.firstName"]'
 last = '//*[@id="consolidatedAddresses.ui_address_2.lastName"]'
 street = '//*[@id="consolidatedAddresses.ui_address_2.street"]'
 city = '//*[@id="consolidatedAddresses.ui_address_2.city"]'
@@ -96,7 +96,9 @@ def Test():
             time.sleep(1)
             classname(checkout).click()
             classname(guest).click()
-            xpath(first).send_keys("John")
+            xpath(first).send_keys(userFirst)
+            time.sleep(3)
+            break
             xpath(last).send_keys("Doe")
             xpath(street).send_keys("1760 Utica Ave")
             xpath(city).send_keys("Brooklyn")
