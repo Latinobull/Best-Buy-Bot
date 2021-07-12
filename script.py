@@ -39,37 +39,37 @@ def startBot():
 
 def Test():
     window.destroy()
-    # content = [
-    #     first_value.get(),
-    #     last_value.get(),
-    #     address_value.get(),
-    #     city_value.get(),
-    #     zipcode_value.get(),
-    #     email_value.get(),
-    #     phone_value.get(),
-    #     card_value.get(),
-    #     month_value.get(),
-    #     year_value.get(),
-    #     ccv_value.get(),
-    #     site_value.get(),
-    # ]
+    content = [
+        first_value.get(),
+        last_value.get(),
+        address_value.get(),
+        city_value.get(),
+        zipcode_value.get(),
+        email_value.get(),
+        phone_value.get(),
+        card_value.get(),
+        month_value.get(),
+        year_value.get(),
+        ccv_value.get(),
+        site_value.get(),
+    ]
 
-    # (
-    #     userFirst,
-    #     userLast,
-    #     userAddress,
-    #     userCity,
-    #     userZipcode,
-    #     userEmail,
-    #     userPhone,
-    #     userCard,
-    #     userMonth,
-    #     userYear,
-    #     userCCV,
-    #     userSite,
-    # ) = content
+    (
+        userFirst,
+        userLast,
+        userAddress,
+        userCity,
+        userZipcode,
+        userEmail,
+        userPhone,
+        userCard,
+        userMonth,
+        userYear,
+        userCCV,
+        userSite,
+    ) = content
 
-    print(first_value.get())
+    print(userFirst)
     PATH = "C:\Program Files (x86)\chromedriver.exe"
     PAGE = "https://www.bestbuy.com/site/samsung-galaxy-buds-true-wireless-earbud-headphones-black/6400885.p?skuId=6400885"
     options = webdriver.ChromeOptions()
@@ -150,6 +150,7 @@ def startApp():
     addressLabel = Label(window, text="Address St(apt if necessary):")
     addressLabel.grid(row=2, column=0)
 
+    global address_value
     address_value = StringVar()
     address = Entry(window, width=20, textvariable=address_value)
     address.grid(row=2, column=1)
@@ -157,6 +158,7 @@ def startApp():
     cityLabel = Label(window, text="City:")
     cityLabel.grid(row=3, column=0)
 
+    global city_value
     city_value = StringVar()
     city = Entry(window, width=20, textvariable=city_value)
     city.grid(row=3, column=1)
@@ -164,6 +166,7 @@ def startApp():
     zipcodeLabel = Label(window, text="Zipcode:")
     zipcodeLabel.grid(row=4, column=0)
 
+    global zipcode_value
     zipcode_value = StringVar()
     zipcode = Entry(window, width=20, textvariable=zipcode_value)
     zipcode.grid(row=4, column=1)
@@ -171,6 +174,7 @@ def startApp():
     emailLabel = Label(window, text="Email:")
     emailLabel.grid(row=5, column=0)
 
+    global email_value
     email_value = StringVar()
     email = Entry(window, width=20, textvariable=email_value)
     email.grid(row=5, column=1)
@@ -178,6 +182,7 @@ def startApp():
     phoneLabel = Label(window, text="Phone Number: (1)")
     phoneLabel.grid(row=6, column=0)
 
+    global phone_value
     phone_value = StringVar()
     phone = Entry(window, width=20, textvariable=phone_value)
     phone.grid(row=6, column=1)
@@ -185,6 +190,7 @@ def startApp():
     cardLabel = Label(window, text="Card Number (no spaces):")
     cardLabel.grid(row=7, column=0)
 
+    global card_value
     card_value = StringVar()
     card = Entry(window, width=20, textvariable=card_value)
     card.grid(row=7, column=1)
@@ -192,6 +198,7 @@ def startApp():
     monthLabel = Label(window, text="Month of Expiration (MM):")
     monthLabel.grid(row=8, column=0)
 
+    global month_value
     month_value = StringVar()
     month = Entry(window, width=20, textvariable=month_value)
     month.grid(row=8, column=1)
@@ -199,6 +206,7 @@ def startApp():
     yearLabel = Label(window, text="Year of Expiration (YYYY):")
     yearLabel.grid(row=9, column=0)
 
+    global year_value
     year_value = StringVar()
     year = Entry(window, width=20, textvariable=year_value)
     year.grid(row=9, column=1)
@@ -206,6 +214,7 @@ def startApp():
     ccvLabel = Label(window, text="Security Code:")
     ccvLabel.grid(row=10, column=0)
 
+    global ccv_value
     ccv_value = StringVar()
     ccv = Entry(window, width=20, textvariable=ccv_value)
     ccv.grid(row=10, column=1)
@@ -213,6 +222,7 @@ def startApp():
     siteLabel = Label(window, text="Link to Website:")
     siteLabel.grid(row=11, column=0)
 
+    global site_value
     site_value = StringVar()
     site = Entry(window, width=20, textvariable=site_value)
     site.grid(row=11, column=1)
