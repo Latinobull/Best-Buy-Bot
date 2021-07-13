@@ -71,7 +71,7 @@ def Test():
 
     print(userFirst)
     PATH = "C:\Program Files (x86)\chromedriver.exe"
-    PAGE = "https://www.bestbuy.com/site/samsung-galaxy-buds-true-wireless-earbud-headphones-black/6400885.p?skuId=6400885"
+    PAGE = userSite
     options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(PATH)
     driver.implicitly_wait(10)
